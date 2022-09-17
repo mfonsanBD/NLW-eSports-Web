@@ -1,31 +1,37 @@
 export default [
   {
-    img: '/game-1.png',
+    id: '1',
+    bannerUrl: '/game-1.png',
     title: 'League of Legends',
     ads: 4
   },
   {
-    img: '/game-2.png',
+    id: '2',
+    bannerUrl: '/game-2.png',
     title: 'Dota 2',
     ads: 4
   },
   {
-    img: '/game-3.png',
+    id: '3',
+    bannerUrl: '/game-3.png',
     title: 'Counter Strike',
     ads: 4
   },
   {
-    img: '/game-4.png',
+    id: '4',
+    bannerUrl: '/game-4.png',
     title: 'Apex Legends',
     ads: 4
   },
   {
-    img: '/game-5.png',
+    id: '5',
+    bannerUrl: '/game-5.png',
     title: 'Fortnite',
     ads: 4
   },
   {
-    img: '/game-6.png',
+    id: '6',
+    bannerUrl: '/game-6.png',
     title: 'World of Warcraft',
     ads: 4
   }
