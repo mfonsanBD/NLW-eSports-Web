@@ -39,7 +39,7 @@ function App() {
         <Dialog.Portal>
           <Dialog.Overlay className='bg-black/70 inset-0 fixed' />
 
-          <ModalContent />
+          <ModalContent games={games} />
         </Dialog.Portal>
       </Dialog.Root>
     </div>

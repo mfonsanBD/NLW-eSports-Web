@@ -1,14 +1,17 @@
 import { Dialog, DialogClose } from "@radix-ui/react-dialog";
-import { GameController } from "phosphor-react";
+import { Check, GameController } from "phosphor-react";
+import * as Checkbox from '@radix-ui/react-checkbox';
 
 import { Input } from "./Form/Input";
+import { SelectGames, SelectGamesProps } from "./Form/Select";
 
-export function Form () {
+export function Form ({ games }: SelectGamesProps) {
   return (
     <form className="mt-8 flex flex-col gap-4">
+      
       <div className="flex flex-col gap-2">
         <label htmlFor="game">Qual o game?</label>
-        <Input id="game" placeholder="Selecione o game que deseja jogar!" />
+        <SelectGames games={games} />
       </div>
 
       <div className="flex flex-col gap-2">
@@ -86,7 +89,11 @@ export function Form () {
       </div>
 
       <div className="flex items-center gap-2 mt-2">
-        <input type="checkbox" />
+      <Checkbox.Root className="w-6 h-6 p-1 rounded bg-zinc-900">
+        <Checkbox.Indicator>
+          <Check className="w-4 h-4 text-emerald-400" />
+        </Checkbox.Indicator>
+      </Checkbox.Root>
         <span className="text-sm font-normal">Costumo me conectar ao chat de voz</span>
       </div>
 
