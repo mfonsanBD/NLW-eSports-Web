@@ -1,4 +1,5 @@
 import * as Select from '@radix-ui/react-select';
+import { CaretDown } from 'phosphor-react';
 
 export interface SelectGamesData {
   id: string
@@ -7,14 +8,15 @@ export interface SelectGamesData {
 
 export interface SelectGamesProps {
   games: SelectGamesData[]
+  name?: string
 }
 
-export function SelectGames({ games }: SelectGamesProps) {
+export function SelectGames({ games, name }: SelectGamesProps) {
   return (
-    <Select.Root defaultValue=''>
+    <Select.Root defaultValue='' name={name}>
       <Select.Trigger className='bg-zinc-900 py-3 px-4 rounded text-sm text-white flex items-center justify-between'>
         <Select.Value />
-        <Select.Icon />
+        <CaretDown size={24} />
       </Select.Trigger>
 
       <Select.Portal>
