@@ -146,7 +146,7 @@ export function Form ({ games }: SelectGamesProps) {
       <footer className="flex items-center gap-2 justify-center sm:justify-end mt-1 sm:mt-4">
         <DialogClose
           type="button"
-          className="bg-zinc-500 hover:bg-zinc-600 px-5 py-3 rounded flex-1"
+          className="bg-zinc-500 hover:bg-zinc-600 px-5 py-3 rounded flex-1 sm:flex-none"
         >
           Cancelar
         </DialogClose>
