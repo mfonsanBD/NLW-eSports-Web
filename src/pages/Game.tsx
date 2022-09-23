@@ -28,14 +28,14 @@ function Game() {
     : `Este jogo tem ${ads.length} anúncio${ads.length === 1 ? '' : 's' }!`
   
  return (
-  <div className="flex items-center justify-between">
-    <div className="bg-white w-[1024px] h-screen relative">
+  <div className="flex flex-col sm:flex-row items-center justify-between mb-8 sm:mb-0">
+    <div className="bg-white w-full sm:w-[1024px] h-80 sm:h-screen relative">
       <img src={game?.bannerUrl} alt={game?.title} className="absolute object-cover w-full h-full" />
     </div>
-    <div className="w-full h-screen overflow-y-auto px-20 py-2">
+    <div className="w-full h-screen overflow-y-auto px-8 sm:px-20 py-2">
       <Heading title={`${game?.title}`} subtitle={phrase} direction="text-left" />
 
-      <div className="grid grid-cols-4 gap-4 mt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-8">
         {ads.map((ad) => (
           <AdCard data={ad} key={ad.id}/>
         ))}

@@ -47,7 +47,7 @@ export function Form ({ games }: SelectGamesProps) {
         <Input id="nickname" name="nickname" placeholder="Como te chamam dentro do game?" />
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid sm:grid-cols-2 gap-6">
         <div className="flex flex-col gap-2">
           <label htmlFor="yearsPlaying">Joga a quantos anos?</label>
           <Input id="yearsPlaying" name="yearsPlaying" placeholder="Tudo bem ser ZERO" />
@@ -58,7 +58,7 @@ export function Form ({ games }: SelectGamesProps) {
         </div>
       </div>
 
-      <div className="flex justify-between gap-6">
+      <div className="flex flex-col sm:flex-row justify-between gap-6">
         <div className="flex flex-col gap-2 flex-1">
           <label htmlFor="weekDays">Quando costuma jogar?</label>
           <ToggleGroup.Root 
@@ -143,10 +143,10 @@ export function Form ({ games }: SelectGamesProps) {
         <span className="text-sm font-normal">Costumo me conectar ao chat de voz</span>
       </div>
 
-      <footer className="flex items-center gap-2 justify-end mt-4">
+      <footer className="flex items-center gap-2 justify-center sm:justify-end mt-1 sm:mt-4">
         <DialogClose
           type="button"
-          className="bg-zinc-500 hover:bg-zinc-600 px-5 py-3 rounded"
+          className="bg-zinc-500 hover:bg-zinc-600 px-5 py-3 rounded flex-1"
         >
           Cancelar
         </DialogClose>
