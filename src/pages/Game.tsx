@@ -14,10 +14,10 @@ function Game() {
   const [game, setGame] = useState<GameCardData>()
 
   useEffect(() => {
-    axios(`http://localhost:3333/games/${id}/ads`).then(response => {
+    axios(`${import.meta.env.VITE_API_URL}games/${id}/ads`).then(response => {
       setAds(response.data)
     })
-    axios(`http://localhost:3333/game/${id}`).then(response => {
+    axios(`${import.meta.env.VITE_API_URL}game/${id}`).then(response => {
       setGame(response.data)
     })
   }, [])
