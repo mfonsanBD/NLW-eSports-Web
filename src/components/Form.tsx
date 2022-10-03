@@ -19,7 +19,7 @@ export function Form ({ games }: SelectGamesProps) {
     const data = Object.fromEntries(formData)
 
     try {
-      await axios.post(`http://localhost:3333/games/${data.game}/ads`, {
+      await axios.post(`${import.meta.env.VITE_API_URL}games/${data.game}/ads`, {
         name: data.nickname,
         yearsPlaying: Number(data.yearsPlaying),
         discord: data.discord,
